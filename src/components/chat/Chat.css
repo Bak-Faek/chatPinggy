@@ -1,0 +1,39 @@
+.globalContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  height: 100vh;
+  gap: 2rem;
+  align-items: center;
+}
+
+#messageContainer {
+  display: flex;
+  flex-direction: column;
+  border: blue 1px solid;
+  height: 30vh;
+  width: 100%;
+  padding: 1rem;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#textArea {
+  width: 40%;
+  font-size: 1.5rem;
+}
+
+#addButton {
+  width: 20%;
+  background-color: lightgreen;
+  height: 2rem;
+  margin: 0 10%;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#error{
+    color: red;
+    font-weight: bold;
+}
