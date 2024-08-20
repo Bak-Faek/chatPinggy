@@ -1,0 +1,33 @@
+.roomContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 5rem;
+}
+
+li {
+  display: flex;
+  list-style: none;
+  height: 2.5rem;
+  border-top: black 1px solid;
+  border-left: black 1px solid;
+  justify-content: center;
+  align-items: center;
+}
+
+#roomDiv {
+  display: flex;
+  height: 2.5rem;
+  border-top: black 1px solid;
+  border-left: black 1px solid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#roomButton {
+  width: 100%;
+  cursor: pointer;
+  background-color: lightcoral;
+  border: black 1px solid;
+  height: 2.5rem;
+}

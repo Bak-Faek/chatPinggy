@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useUsername } from '../../context/userContext';
-import './Chat.css';
+import { useUsername } from "../../context/userContext";
+import "./Chat.css";
+import Room from "../Room/Room";
 
 function Chat() {
   const [message, setMessage] = useState("");
@@ -25,21 +26,26 @@ function Chat() {
 
   return (
     <section className="globalContainer">
-      <h2>Hello, {username}!</h2>
-      <div id="messageContainer">
-        {messages.map((msg, index) => (
-          <div key={index}>
-            <strong>{msg.user}:</strong> {msg.text}
-          </div>
-        ))}
+      <div className="chatContainer">
+        <Room />
+        <div id="messageContainer">
+          {messages.map((msg, index) => (
+            <div key={index}>
+              <strong>{msg.user}:</strong> {msg.text}
+            </div>
+          ))}
+        </div>
       </div>
+
       <textarea
         id="textArea"
         placeholder="Ecris ton message ici ..."
         value={message}
         onChange={handleInputChange}
       />
-      <button id="addButton" onClick={handleSubmit}>Envoyer le message</button>
+      <button id="addButton" onClick={handleSubmit}>
+        Envoyer le message
+      </button>
       {error && <p id="error">{error}</p>}
     </section>
   );
